@@ -21,7 +21,12 @@ jobs:
     # - name: java version
     #   run: java --varsion
     - name: running sh file
-      run: sh java-sh.sh
+      run: |
+        echo "java version"
+        java --version
+        
+        echo "javac version"
+        javac --version
 
 
         
