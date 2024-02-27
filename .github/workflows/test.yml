@@ -28,11 +28,15 @@ jobs:
         echo "javac version"
         javac --version
 
-        echo "installing jdk17"
-        sudo apt install openjdk-17-jdk openjdk-17-jre
-
-        echo ""latest java verion"
-        java --version
+    - name: 'Set up archived Oracle JDK 17.0.1'
+      uses: oracle-actions/setup-java@v1
+      with:
+        website: 'oracle.com'
+        release: '17'
+        version: '17.0.1'
+    - name: java latest version
+      run: |
+        echo "java version"
 
         
 
